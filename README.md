@@ -34,6 +34,9 @@ flutter run
 - Persistence: Shared Preferences
 - Navigation: GetX Named Routes
 
+## State Management Explanation
+This app uses GetX for state management, which provides a simple yet powerful solution for reactive programming. The `ArticleController` extends `GetxController` and manages the app's state using observable variables (`.obs`). This allows for automatic UI updates when data changes, with minimal boilerplate code. The controller handles data fetching, search functionality, and favorites management, while the views simply observe and react to these state changes.
+
 ## Project Structure
 ```
 lib/
@@ -56,3 +59,11 @@ lib/
 - **Favorites**: Save and manage favorite articles
 - **Detail View**: View full article content with favorite toggle
 - **Responsive Design**: Works on both mobile and tablet devices
+
+## Known Issues / Limitations
+- Currently using a mock API (JSONPlaceholder) - in a production environment, this would need to be replaced with a real API
+- No offline support - articles are not cached locally
+- No pagination implemented for large article lists
+- No user authentication system
+- Limited error handling for network failures
+- No unit tests or widget tests implemented yet
